@@ -1,0 +1,89 @@
+intent,state,department,portal_link
+Electricity,Uttarakhand,Uttarakhand Power Corporation Limited (UPCL),https://upcl.org
+Electricity,Uttar Pradesh,Uttar Pradesh Power Corporation Limited (UPPCL),https://www.upcl.org
+Electricity,Delhi,BSES Rajdhani Power Limited,https://www.bsesdelhi.com
+Electricity,Haryana,Uttar Haryana Bijli Vitran Nigam,https://www.uhbvn.org.in
+Electricity,Punjab,Punjab State Power Corporation Limited,https://www.pspcl.in
+Electricity,Rajasthan,Rajasthan Rajya Vidyut Prasaran Nigam,https://energy.rajasthan.gov.in
+Electricity,Bihar,South Bihar Power Distribution Company,https://sbpdcl.bihar.gov.in
+Electricity,Madhya Pradesh,Madhya Pradesh Paschim Kshetra Vidyut Vitaran,https://www.mpwz.co.in
+Electricity,Maharashtra,Maharashtra State Electricity Distribution,https://www.mahadiscom.in
+Electricity,Gujarat,Gujarat Urja Vikas Nigam,https://gujaratinformation.net/guvnl
+Electricity,Karnataka,Bangalore Electricity Supply Company,https://www.bescom.org
+Electricity,Tamil Nadu,Tamil Nadu Generation and Distribution Corporation,https://www.tangedco.gov.in
+Electricity,Telangana,Telangana State Southern Power Distribution Company,https://www.tssouthernpower.com
+Electricity,Andhra Pradesh,AP Eastern Power Distribution Company,https://www.apeasternpower.com
+Electricity,Kerala,Kerala State Electricity Board,https://www.kseb.in
+Electricity,West Bengal,West Bengal State Electricity Distribution,https://www.wbsedcl.in
+Electricity,Odisha,TP Southern Odisha Distribution,https://www.tpsouthernodisha.com
+Electricity,Jharkhand,Jharkhand Bijli Vitran Nigam,https://www.jbvnl.co.in
+Electricity,Chhattisgarh,Chhattisgarh State Power Distribution,https://www.cspdcl.co.in
+Electricity,Assam,Assam Power Distribution Company,https://apdcl.org
+Electricity,Other,Central Electricity Authority,https://cea.nic.in
+Water,Uttarakhand,Uttarakhand Jal Sansthan,https://jalnigam.uk.gov.in
+Water,Uttar Pradesh,Uttar Pradesh Jal Nigam,https://upjn.org
+Water,Delhi,Delhi Jal Board,https://delhijalboard.delhi.gov.in
+Water,Haryana,Haryana Urban Development Authority,https://huda.org.in
+Water,Punjab,Water Supply and Sanitation Department Punjab,https://punjab.gov.in/water-supply
+Water,Rajasthan,Public Health Engineering Department Rajasthan,https://phedwater.rajasthan.gov.in
+Water,Bihar,Public Health Engineering Department Bihar,https://phed.bihar.gov.in
+Water,Madhya Pradesh,Public Health Engineering Department MP,https://phed.mp.gov.in
+Water,Maharashtra,Maharashtra Jeevan Pradhikaran,https://mjp.maharashtra.gov.in
+Water,Gujarat,Gujarat Water Supply and Sewerage Board,https://guj-nwrws.gujarat.gov.in
+Water,Karnataka,Bangalore Water Supply and Sewerage Board,https://bwssb.gov.in
+Water,Tamil Nadu,Tamil Nadu Water Supply and Drainage Board,https://www.twadboard.tn.gov.in
+Water,Telangana,Hyderabad Metropolitan Water Supply,https://www.hyderabadwater.gov.in
+Water,Andhra Pradesh,AP Water Resources Department,https://waterresources.ap.gov.in
+Water,Kerala,Kerala Water Authority,https://www.kwa.kerala.gov.in
+Water,West Bengal,Public Health Engineering Department WB,https://wbphed.gov.in
+Water,Odisha,Public Health Engineering Organization Odisha,https://pheo.nic.in
+Water,Jharkhand,Drinking Water and Sanitation Department Jharkhand,https://dws.jharkhand.gov.in
+Water,Chhattisgarh,Public Health Engineering Department CG,https://phed.cgstate.gov.in
+Water,Assam,Public Health Engineering Department Assam,https://phe.assam.gov.in
+Water,Other,Ministry of Jal Shakti,https://jalshakti-dowr.gov.in
+Healthcare,Uttarakhand,Health and Family Welfare Department Uttarakhand,https://health.uk.gov.in
+Healthcare,Uttar Pradesh,Uttar Pradesh Medical Health Department,https://uphealth.up.nic.in
+Healthcare,Delhi,Delhi Health Department,https://health.delhi.gov.in
+Healthcare,Haryana,Haryana Health Department,https://haryanahaalth.nic.in
+Healthcare,Punjab,Punjab Health Department,https://pbhealth.gov.in
+Healthcare,Rajasthan,Rajasthan Medical Health Department,https://rajswasthya.nic.in
+Healthcare,Bihar,Bihar Health Department,https://statehealthsocietybihar.org
+Healthcare,Madhya Pradesh,MP Health Department,https://health.mp.gov.in
+Healthcare,Maharashtra,Maharashtra Health Department,https://arogya.maharashtra.gov.in
+Healthcare,Gujarat,Gujarat Health Department,https://gujhealth.gujarat.gov.in
+Healthcare,Karnataka,Karnataka Health Department,https://karunadu.karnataka.gov.in
+Healthcare,Tamil Nadu,Tamil Nadu Health Department,https://tnhealth.tn.gov.in
+Healthcare,Telangana,Telangana Health Department,https://health.telangana.gov.in
+Healthcare,Andhra Pradesh,AP Health Department,https://hmfw.ap.gov.in
+Healthcare,Kerala,Kerala Health Department,https://dhs.kerala.gov.in
+Healthcare,West Bengal,WB Health Department,https://wbhealth.gov.in
+Healthcare,Odisha,Odisha Health Department,https://health.odisha.gov.in
+Healthcare,Jharkhand,Jharkhand Health Department,https://jharkhand.gov.in/health
+Healthcare,Chhattisgarh,CG Health Department,https://cghealth.nic.in
+Healthcare,Assam,Assam Health Department,https://health.assam.gov.in
+Healthcare,Other,Ministry of Health and Family Welfare,https://mohfw.gov.in
+Road,Uttarakhand,Public Works Department Uttarakhand,https://pwd.uk.gov.in
+Road,Uttar Pradesh,Public Works Department UP,https://pwd.up.nic.in
+Road,Delhi,Public Works Department Delhi,https://pwd.delhi.gov.in
+Road,Haryana,Public Works Department Haryana,https://haryanapwd.gov.in
+Road,Punjab,Public Works Department Punjab,https://pwdpunjab.gov.in
+Road,Rajasthan,Public Works Department Rajasthan,https://pwd.rajasthan.gov.in
+Road,Bihar,Road Construction Department Bihar,https://rcd.bihar.gov.in
+Road,Madhya Pradesh,Public Works Department MP,https://mppwd.gov.in
+Road,Maharashtra,Public Works Department Maharashtra,https://pwd.maharashtra.gov.in
+Road,Gujarat,Roads and Buildings Department Gujarat,https://gujaratroads.com
+Road,Karnataka,Public Works Department Karnataka,https://pwdp.karnataka.gov.in
+Road,Tamil Nadu,Highways Department Tamil Nadu,https://www.tnhighways.gov.in
+Road,Telangana,Roads and Buildings Department Telangana,https://rnd.telangana.gov.in
+Road,Andhra Pradesh,Roads and Buildings Department AP,https://aprdb.ap.gov.in
+Road,Kerala,Public Works Department Kerala,https://pwd.kerala.gov.in
+Road,West Bengal,Public Works Department WB,https://wbpwd.gov.in
+Road,Odisha,Works Department Odisha,https://works.odisha.gov.in
+Road,Jharkhand,Road Construction Department Jharkhand,https://jharkhand.gov.in/road
+Road,Chhattisgarh,Public Works Department CG,https://pwd.cgstate.gov.in
+Road,Assam,Public Works Department Assam,https://pwd.assam.gov.in
+Road,Other,Ministry of Road Transport and Highways,https://morth.nic.in
+Sanitation,Uttarakhand,Urban Development Directorate Uttarakhand,https://usnp.in
+Sanitation,Uttar Pradesh,UP Urban Development Department,https://upurban.nic.in
+Sanitation,Delhi,SDMC - Sanitation Department,https://mcdonline.nic.in
+Sanitation,Other,Swachh Bharat Mission,https://swachhbharatmission.gov.in

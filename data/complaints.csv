@@ -1,0 +1,110 @@
+complaint_text,intent
+no electricity in my area for 3 days,Electricity
+power cut since morning,Electricity
+lights are not working,Electricity
+electricity bill problem,Electricity
+transformer blast in my area,Electricity
+voltage fluctuation problem,Electricity
+no power supply from yesterday,Electricity
+street light not working at night,Electricity
+water supply not coming,Water
+no drinking water available,Water
+water pipeline broken,Water
+water bill too high,Water
+dirty water coming from tap,Water
+water leakage in street,Water
+water pressure is very low,Water
+water tanker not coming,Water
+hospital not giving medicine,Healthcare
+government hospital is dirty,Healthcare
+doctor not available in hospital,Healthcare
+ambulance service not responding,Healthcare
+medical store closed,Healthcare
+health camp not organized,Healthcare
+vaccination not available,Healthcare
+road has big pothole,Road
+road construction going on for months,Road
+street lights not working,Road
+road damaged after rains,Road
+no footpath on road,Road
+road diving issue,Road
+garbage not collected,Sanitation
+stinking smell in area,Sanitation
+sewage line blocked,Sanitation
+toilet not working,Sanitation
+drainage problem in street,Sanitation
+public toilet dirty,Sanitation
+waste dumping in open,Sanitation
+ration card not received,Ration
+PDS shop closed,Ration
+ration distribution irregular,Ration
+ration card correction needed,Ration
+gas subsidy not received,Subsidy
+LPG connection not getting,Subsidy
+fertilizer subsidy issue,Subsidy
+scholarship not received,Education
+school fees reimbursement pending,Education
+mid day meal quality poor,Education
+school building dangerous,Education
+teacher not attending school,Education
+police not registering FIR,Safety
+theft in my area,Safety
+women safety issue,Safety
+street dogs problem,Safety
+traffic signal not working,Transport
+bus service irregular,Transport
+auto rickshaw overcharging,Transport
+metro card issue,Transport
+pension not received,Pension
+old age home problem,Pension
+widow pension not coming,Pension
+disability certificate issue,Disability
+disability pension delayed,Disability
+job card not updated,Employment
+MGNREGA wages not paid,Employment
+employment office not responding,Employment
+land record issue,Revenue
+property tax bill wrong,Revenue
+income certificate needed,Revenue
+caste certificate problem,Revenue
+birth certificate not issued,Certificate
+death certificate correction,Certificate
+marriage certificate problem,Certificate
+electricity meter not working,Electricity
+power theft in area,Electricity
+electric pole leaning,Electricity
+wire hanging dangerously,Electricity
+transformer making noise,Electricity
+frequent power cuts,Electricity
+water motor not working,Water
+borewell not functioning,Water
+water tanker not reaching,Water
+tap broken in street,Water
+drainage water mixing,Water
+flooding in street,Drainage
+sewage water entering house,Drainage
+manhole cover missing,Drainage
+drains choked,Drainage
+stagnant water breeding mosquitoes,Health
+mosquito problem in area,Health
+fogging not done,Health
+dengue case in locality,Health
+malaria spread concern,Health
+municipal school building unsafe,Education
+school without drinking water,Education
+school toilet not clean,Education
+mid day meal not provided,Education
+anganwadi center closed,Women
+women helpline not responding,Women
+self help group loan issue,Women
+maternity benefit not received,Women
+child care center not functional,Children
+anganwadi worker absent,Children
+child malnutrition concern,Children
+immunization camp not held,Children
+farmer loan waiver not processed,Agriculture
+seed subsidy not received,Agriculture
+crop insurance claim pending,Agriculture
+irrigation canal broken,Agriculture
+soil testing lab closed,Agriculture
+pesticide quality issue,Agriculture
