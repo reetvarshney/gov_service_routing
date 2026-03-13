@@ -1,0 +1,10 @@
+gradio
+numpy
+pandas
+scikit-learn
+joblib
+spacy
+transformers
+torch
+openai-whisper
+scipy
