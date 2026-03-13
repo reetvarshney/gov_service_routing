@@ -40,7 +40,7 @@ class PortalRouter:
             state: User's state (default: Uttarakhand)
             
         Returns:
-            Dictionary with portal info or None if not found
+            Dictionary with portal info
         """
         if self.portals_df is None or len(self.portals_df) == 0:
             return {

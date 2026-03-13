@@ -1,5 +1,5 @@
 """
-Speech-to-Text Module with Hindi Support
+Speech-to-Text Module with Improved Hindi Support
 """
 
 import whisper
@@ -19,22 +19,16 @@ class SpeechProcessor:
     def load_model(self):
         """Load Whisper model with multilingual support"""
         try:
-            # 'base' model works well for Hindi, 'tiny' is faster but less accurate
-            self.model = whisper.load_model("base")  # Can also use "tiny" for speed
+            # Use 'base' or 'small' for better Hindi accuracy
+            # 'tiny' is faster but less accurate for Hindi
+            self.model = whisper.load_model("base")  # Better for Hindi
             print("✅ Speech model loaded successfully! Supports Hindi and English")
         except Exception as e:
             print(f"❌ Failed to load model: {e}")
-            print("⚠️ Will attempt to use fallback")
     
     def transcribe(self, audio_path):
         """
         Convert audio file to text (supports Hindi and English)
-        
-        Args:
-            audio_path: Path to audio file
-            
-        Returns:
-            Transcribed text (in original language)
         """
         if not os.path.exists(audio_path):
             return "Error: Audio file not found"
@@ -43,17 +37,25 @@ class SpeechProcessor:
             return "Speech recognition not available"
         
         try:
+            print(f"Transcribing audio file: {audio_path}")
+            
             # Transcribe with language auto-detection
             result = self.model.transcribe(
                 audio_path,
                 language=None,  # Auto-detect language
-                task="transcribe",  # Just transcribe, don't translate
-                fp16=False  # Use float32 (compatible with CPU)
+                task="transcribe",
+                fp16=False,  # Use float32 (compatible with CPU)
+                temperature=0.0,  # Lower temperature for more accurate transcription
+                compression_ratio_threshold=2.4,
+                logprob_threshold=-1.0,
+                no_speech_threshold=0.6,
+                condition_on_previous_text=False  # Better for code-switching
             )
             
             text = result["text"].strip()
             detected_language = result.get("language", "unknown")
             print(f"📢 Detected language: {detected_language}")
+            print(f"📝 Transcribed text: {text}")
             
             if text:
                 return text
@@ -61,17 +63,12 @@ class SpeechProcessor:
                 return "Could not understand audio. Please try again."
                 
         except Exception as e:
+            print(f"Error in transcription: {e}")
             return f"Error in transcription: {str(e)}"
     
     def transcribe_microphone(self, audio_data):
         """
         Transcribe from microphone input
-        
-        Args:
-            audio_data: Audio data from microphone (sample_rate, audio_array)
-            
-        Returns:
-            Transcribed text (in original language)
         """
         if self.model is None:
             return "Speech recognition not available"
@@ -80,6 +77,8 @@ class SpeechProcessor:
             # Handle different audio formats
             if isinstance(audio_data, tuple) and len(audio_data) == 2:
                 sample_rate, audio_array = audio_data
+                
+                print(f"Processing microphone audio: {sample_rate}Hz")
                 
                 # Save to temp file
                 with tempfile.NamedTemporaryFile(delete=False, suffix='.wav') as tmp:
@@ -91,43 +90,16 @@ class SpeechProcessor:
                 text = self.transcribe(tmp_path)
                 
                 # Clean up
-                os.unlink(tmp_path)
+                try:
+                    os.unlink(tmp_path)
+                except:
+                    pass
                 
                 return text
             else:
+                print(f"Unexpected audio format: {type(audio_data)}")
                 return "Invalid audio format"
                 
         except Exception as e:
+            print(f"Error processing microphone: {e}")
             return f"Error processing microphone: {str(e)}"
-    
-    def transcribe_and_translate(self, audio_path, target_language="en"):
-        """
-        Transcribe and optionally translate to target language
-        
-        Args:
-            audio_path: Path to audio file
-            target_language: Target language code (e.g., 'en' for English)
-            
-        Returns:
-            Transcribed and translated text
-        """
-        if self.model is None:
-            return "Speech recognition not available"
-        
-        try:
-            # Transcribe with translation task
-            result = self.model.transcribe(
-                audio_path,
-                task="translate",  # Translate to English
-                fp16=False
-            )
-            
-            text = result["text"].strip()
-            detected_language = result.get("language", "unknown")
-            print(f"📢 Detected language: {detected_language}")
-            print(f"✅ Translated to: {text}")
-            
-            return text
-            
-        except Exception as e:
-            return f"Error: {str(e)}"
