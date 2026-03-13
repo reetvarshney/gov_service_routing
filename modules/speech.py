@@ -19,12 +19,11 @@ class SpeechProcessor:
     def load_model(self):
         """Load Whisper model with multilingual support"""
         try:
-            # Use 'base' or 'small' for better Hindi accuracy
-            # 'tiny' is faster but less accurate for Hindi
-            self.model = whisper.load_model("base")  # Better for Hindi
-            print("✅ Speech model loaded successfully! Supports Hindi and English")
+
+            self.model = whisper.load_model("base")  
+            print(" Speech model loaded successfully! Supports Hindi and English")
         except Exception as e:
-            print(f"❌ Failed to load model: {e}")
+            print(f" Failed to load model: {e}")
     
     def transcribe(self, audio_path):
         """
@@ -38,24 +37,23 @@ class SpeechProcessor:
         
         try:
             print(f"Transcribing audio file: {audio_path}")
-            
-            # Transcribe with language auto-detection
+
             result = self.model.transcribe(
                 audio_path,
-                language=None,  # Auto-detect language
+                language=None,  
                 task="transcribe",
-                fp16=False,  # Use float32 (compatible with CPU)
-                temperature=0.0,  # Lower temperature for more accurate transcription
+                fp16=False,  
+                temperature=0.0,  
                 compression_ratio_threshold=2.4,
                 logprob_threshold=-1.0,
                 no_speech_threshold=0.6,
-                condition_on_previous_text=False  # Better for code-switching
+                condition_on_previous_text=False  
             )
             
             text = result["text"].strip()
             detected_language = result.get("language", "unknown")
-            print(f"📢 Detected language: {detected_language}")
-            print(f"📝 Transcribed text: {text}")
+            print(f" Detected language: {detected_language}")
+            print(f" Transcribed text: {text}")
             
             if text:
                 return text
@@ -74,13 +72,11 @@ class SpeechProcessor:
             return "Speech recognition not available"
         
         try:
-            # Handle different audio formats
+            # audio formats
             if isinstance(audio_data, tuple) and len(audio_data) == 2:
                 sample_rate, audio_array = audio_data
                 
                 print(f"Processing microphone audio: {sample_rate}Hz")
-                
-                # Save to temp file
                 with tempfile.NamedTemporaryFile(delete=False, suffix='.wav') as tmp:
                     import scipy.io.wavfile as wav
                     wav.write(tmp.name, sample_rate, audio_array.astype(np.int16))
@@ -89,7 +85,6 @@ class SpeechProcessor:
                 # Transcribe
                 text = self.transcribe(tmp_path)
                 
-                # Clean up
                 try:
                     os.unlink(tmp_path)
                 except:

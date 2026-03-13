@@ -8,23 +8,15 @@ import os
 
 class PortalRouter:
     def __init__(self, portal_file="data/portals.csv"):
-        """
-        Initialize the router with portal mapping data
-        
-        Args:
-            portal_file: Path to portal mapping CSV
-        """
+
         self.portal_file = portal_file
         self.portals_df = None
         self.load_portals()
     
     def load_portals(self):
-        """
-        Load portal mapping from CSV file
-        """
+
         if not os.path.exists(self.portal_file):
             print(f"Warning: Portal file not found at {self.portal_file}")
-            # Create empty dataframe with required columns
             self.portals_df = pd.DataFrame(columns=['intent', 'state', 'department', 'portal_link'])
             return
         
@@ -32,16 +24,7 @@ class PortalRouter:
         print(f"Loaded {len(self.portals_df)} portal mappings")
     
     def get_portal(self, intent, state="Uttarakhand"):
-        """
-        Get portal information for intent and state
-        
-        Args:
-            intent: Predicted intent category
-            state: User's state (default: Uttarakhand)
-            
-        Returns:
-            Dictionary with portal info
-        """
+
         if self.portals_df is None or len(self.portals_df) == 0:
             return {
                 'department': 'General Services Portal',
@@ -50,7 +33,7 @@ class PortalRouter:
                 'note': 'Using generic portal (mapping not available)'
             }
         
-        # Try to find state-specific portal
+        # state-specific portal
         result = self.portals_df[
             (self.portals_df['intent'].str.lower() == intent.lower()) & 
             (self.portals_df['state'].str.lower() == state.lower())
@@ -63,8 +46,6 @@ class PortalRouter:
                 'state': state,
                 'note': 'State-specific portal'
             }
-        
-        # Try case-insensitive match for state
         result = self.portals_df[
             (self.portals_df['intent'].str.lower() == intent.lower()) & 
             (self.portals_df['state'].str.lower().str.contains(state.lower()))
@@ -78,7 +59,6 @@ class PortalRouter:
                 'note': 'Similar state match'
             }
         
-        # Fallback to any portal for this intent
         result = self.portals_df[self.portals_df['intent'].str.lower() == intent.lower()]
         
         if len(result) > 0:
@@ -108,26 +88,13 @@ class PortalRouter:
         }
     
     def get_all_states(self):
-        """
-        Get list of all states in the mapping
-        
-        Returns:
-            List of states
-        """
+
         if self.portals_df is not None and len(self.portals_df) > 0:
             return sorted(self.portals_df['state'].unique().tolist())
         return ["Uttarakhand", "Uttar Pradesh", "Delhi", "Other"]
     
     def get_intents_for_state(self, state):
-        """
-        Get all intents available for a state
-        
-        Args:
-            state: State name
-            
-        Returns:
-            List of intents
-        """
+
         if self.portals_df is None:
             return []
         
@@ -135,15 +102,7 @@ class PortalRouter:
         return state_portals['intent'].unique().tolist()
     
     def add_portal(self, intent, state, department, link):
-        """
-        Add a new portal mapping (for future expansion)
-        
-        Args:
-            intent: Intent category
-            state: State name
-            department: Department name
-            link: Portal URL
-        """
+
         new_row = pd.DataFrame({
             'intent': [intent],
             'state': [state],
@@ -164,7 +123,7 @@ class PortalRouter:
 if __name__ == "__main__":
     router = PortalRouter()
     
-    # Test with different intents and states
+    #  different intents and states
     test_cases = [
         ("Electricity", "Uttarakhand"),
         ("Water", "Delhi"),
